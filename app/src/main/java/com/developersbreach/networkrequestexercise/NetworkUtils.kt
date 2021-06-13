@@ -1,35 +1,31 @@
 package com.developersbreach.networkrequestexercise
 
 import java.net.URL
-import java.util.*
-import javax.net.ssl.HttpsURLConnection
 
 fun getResponseFromHttpsUrl(
     requestUrl: URL?
 ): String {
 
-    val urlConnection: HttpsURLConnection = requestUrl?.openConnection() as HttpsURLConnection
-    var response = ""
+    // TODO
 
-    try {
-        // Try to connect and read json data
-        val inputStream = urlConnection.inputStream
-        val scanner = Scanner(inputStream)
-        scanner.useDelimiter("\\A")
-        if (scanner.hasNext()) {
-            response = scanner.next()
-        }
-        scanner.close()
+    // Open connection to HttpsURLConnection
 
-    } catch (exception: Exception) {
-        // If something goes wrong, catch the exception and print it, to solve the error
-        // It will not let our app crash
-        exception.printStackTrace()
+    // Create try catch finally block
 
-    } finally {
-        // Stop the url connection (if open)
-        urlConnection.disconnect()
-    }
+    // Inside try block
+    // Return input stream from connection
+    // Create scanner and allow it to stream
+    // Use delimiter pattern and complete the scan
+    // Save the response and close the scanner
 
-    return response
+    // Inside catch block
+    // Catch exceptions if necessary and print stack or either log it.
+
+    // Inside finally block
+    // Disconnect if any url connections are open
+
+    // Return the response
+    // Log and observe the json response
+
+    return ""
 }

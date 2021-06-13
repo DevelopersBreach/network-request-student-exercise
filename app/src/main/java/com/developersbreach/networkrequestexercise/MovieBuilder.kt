@@ -1,38 +1,48 @@
 package com.developersbreach.networkrequestexercise
 
-import org.json.JSONObject
-import java.net.URL
-
 const val POSTER_APPEND_URL = "https://image.tmdb.org/t/p/w500"
-const val MOVIE_URL = "https://api.themoviedb.org/3/movie/popular?api_key="
+const val MOVIE_URL = "https://api.themoviedb.org/3/movie/popular?api_key=d77b5ab884174f60f4c9e8f50a70d99c"
+
 
 fun getMovieData(): List<Movie> {
-    val requestUrl = URL(MOVIE_URL)
-    val response: String = getResponseFromHttpsUrl(requestUrl)
-    return fetchJsonMovieData(response)
+
+    // TODO
+
+    // First save the string url in variable
+
+    // Convert the string to url by passing string to URL object
+
+    // Pass the created url and send a request to https to receive json response
+
+    // After receiving the json response, send that json data to new function
+    // a function which constructs the objects and arrays and gets all properties
+
+    return listOf<Movie>()
 }
+
 
 fun fetchJsonMovieData(
     jsonResponse: String
 ): List<Movie> {
 
-    // Empty list of movie objects
-    val movieList = ArrayList<Movie>()
+    // TODO
 
-    val baseJsonObject = JSONObject(jsonResponse)
-    val resultsArray = baseJsonObject.getJSONArray("results")
+    // First create a empty ArrayList of type Movie objects.
 
-    for (i in 0 until resultsArray.length()) {
+    // Create base jsonObject and pass the response
 
-        val movieJsonObjects = resultsArray.getJSONObject(i)
+    // Look into nested objects or arrays and create more objects
 
-        val movieTitle = movieJsonObjects.getString("title")
-        val posterPath = movieJsonObjects.getString("poster_path")
-        val poster = POSTER_APPEND_URL + posterPath
+    // If found array, loop inside all objects
 
-        val movie = Movie(movieTitle, poster)
-        movieList.add(movie)
-    }
+    // Look for more nested objects before observing properties
 
-    return movieList
+    // Get all the properties from object lastly created
+
+    // Return all those properties of type new movie object
+    // Add each object to empty ArrayList which we have created
+
+    // Finally return the movie list data.
+
+    return listOf<Movie>()
 }
